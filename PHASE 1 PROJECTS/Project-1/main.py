@@ -15,11 +15,7 @@ while True:
     else:
         print(".",end = "")
 
-#json_data = json.dumps(json_respond,indent = 4)#indent 4 is use to formate
-# print(json_data)
-
 df = pd.DataFrame(json_respond)
 
-# print(df.head(100))
 df.to_csv("Output/API_data.csv",index = False)
 print("File saved!")
