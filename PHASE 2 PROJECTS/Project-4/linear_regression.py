@@ -30,7 +30,7 @@ df = pd.DataFrame(y)
 
 df['y'] = pd.to_numeric(df['y'])
 
-df.to_csv('data/Train.csv')
+df.to_csv('data/Train.csv',index=False)
 print("file save Train.csv")
 
 # plot graph to see datapoint
@@ -67,9 +67,9 @@ for i in tr:
             'y':x[1].text.strip()
         })
 test_df = pd.DataFrame(y)
-test_df['y'] = pd.to_numeric(df['y'])
+test_df['y'] = pd.to_numeric(test_df['y'])
 
-test_df.to_csv('data/test.csv')
+test_df.to_csv('data/test.csv',index=False)
 print("file save test.csv")
 
 #split the data
